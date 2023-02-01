@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: auto;
+    width: 70vw;
+    min-width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    
+}
+a {
+    position: relative;
+    text-decoration: none;
+    color: #a0a0a0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;  
+    padding: 0 10px;
+}
+a::after {
+    content: "";
+    display: block;
+    background-color: #6973c7;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+
+}
+a:hover{
+    color: #ffffff;
+}
+a:hover::after{
+    width: 100%;
+}
+
+/* ABOVE IS NAV BAR STYLING */
+
+body {
+    background-color: black;   
+}
+
+section{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+img {
+    filter: grayscale(100%);
+    max width: 100%;
+    height: auto;
+    object-fit: contain;
+    grid: row start 0;
+    display:flex;
+}
+img:hover{
+    filter: none;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 6vh;
+    text-align: center;
+    background: linear-gradient(to right,
+    rgb(235, 240, 232),
+    rgb(55, 56, 56));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: rgba(5, 102, 206, 0.112);
+    padding-bottom: 2.5rem;
+}
+p {
+    color: #ffffff;
+    display: inline;
+    font-size: 2vh;
+    grid-row: 2;
+    text-align: center;
+    
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: rgba(5, 102, 206, 0.112);
+}
+@media (max-width: 650px) {
+    body {
+        display: block;
+        font-size: 80%;
+    }
+    p {
+        position: relative;
+        margin: -3rem 0 2rem 1rem;
+        padding: 1rem;
+        background: rgba(white, 0.8);
+    }
+}
