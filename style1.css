@@ -47,6 +47,15 @@ a:hover::after{
 
 body {
     background-color: black;   
+   
+}
+article {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
 }
 
 section{
@@ -61,11 +70,9 @@ section{
 
 img {
     filter: grayscale(100%);
-    max width: 100%;
-    height: auto;
-    object-fit: contain;
-    grid: row start 0;
-    display:flex;
+    width: 100%;
+    height: auto;  
+    
 }
 img:hover{
     filter: none;
@@ -86,8 +93,8 @@ p {
     color: #ffffff;
     display: inline;
     font-size: 2vh;
-    grid-row: 2;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
     
 }
 
@@ -102,15 +109,18 @@ footer {
     text-align: center;
     background-color: rgba(5, 102, 206, 0.112);
 }
-@media (max-width: 650px) {
-    body {
-        display: block;
-        font-size: 80%;
+@media only screen and (max-width: 700px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
-    p {
-        position: relative;
-        margin: -3rem 0 2rem 1rem;
-        padding: 1rem;
-        background: rgba(white, 0.8);
+    .horizontal{
+        grid-column: auto / span 1;
+    }
+}
+@media only screen and (max-width: 768px) {
+    
+    img, h1, p, nav {
+    width: 100%;
     }
 }
